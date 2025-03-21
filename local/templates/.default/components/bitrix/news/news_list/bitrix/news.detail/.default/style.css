@@ -1,3 +1,10 @@
+div.image-caption
+{
+	text-align: center;
+    font-size: 14px;
+    color: #76767a;
+	margin-bottom: 64px;
+}
 div.news-detail
 {
 	word-wrap: break-word;

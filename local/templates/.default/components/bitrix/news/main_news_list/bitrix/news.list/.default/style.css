@@ -1,0 +1,91 @@
+div.news-list
+{
+	word-wrap: break-word;
+}
+div.news-list img.preview_picture
+{
+	float:left;
+	margin:0 4px 6px 0;
+}
+.news-date-time {
+	color:#486DAA;
+}
+element.style {
+}
+.news--wide .news__link {
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+}
+@media (min-width: 736px) {
+    .news__link {
+        margin-bottom: 16px;
+    }
+}
+.news__link {
+    margin-bottom: 120px;
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+}
+.accordion__text, .accordion__title, .all-sections__link, .anchor-menu__link, .back-link, .back-link--pagination, .document-link--external .document-link__data, .document-link__title, .errors-summary__link, .footer__button, .go-to-link, .go-to-section__title, .gos-header__button, .links__link, .modal-window__close, .news-important__link, .news__link, .news__topic, .next-link--pagination, .partner-card__title, .person-info__contact-email, .person-info__contact-phone, .phone-link__number, .phone-link__title, .project-card__title, .project-document__title, .see-also__link, .service-card__link, .site-footer__email, .site-footer__logotype, .site-footer__phone, .site-menu__logotype, .slider__next, .slider__prev, .spoiler__button, .useful-links__link, a.person-info__name, a:not([class]) {
+    -webkit-transition: color .1slinear, border-color .175sease-out, outline-color .1slinear;
+    transition: color .1slinear, border-color .175sease-out, outline-color .1slinear;
+}
+a {
+    text-decoration: none;
+    outline-color: transparent;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    -webkit-column-gap: inherit;
+    -moz-column-gap: inherit;
+    column-gap: inherit;
+}
+таблица стилей агента пользователя
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.news__publication-info {
+    display: -webkit-box;
+    display: flex
+;
+    line-height: 1;
+    -webkit-box-ordinal-group: 4;
+    order: 3;
+    margin-top: auto;
+    font-size: 14px;
+    gap: 0;
+}
+@media (min-width: 736px) {
+    body {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+body {
+    font-family: PT Russia, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.news__link:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    content: "";
+}
+::selection {
+    background-color: #0129ee;
+    color: #fff;

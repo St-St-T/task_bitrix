@@ -112,7 +112,7 @@ $APPLICATION->SetTitle("Новости");
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
-		"PREVIEW_TRUNCATE_LEN" => "100",
+		"PREVIEW_TRUNCATE_LEN" => "350",
 		"SEF_FOLDER" => "/novosti/",
 		"SEF_MODE" => "Y",
 		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_ID#/","news"=>"","section"=>""),

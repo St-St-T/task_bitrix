@@ -12,6 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+<div class="news-list">
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?><br />
 <?endif;?>
@@ -20,10 +21,9 @@ $this->setFrameMode(true);
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 	?>
-
-	<div class="news-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+<div class="news-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
  <article class="news news--wide">
-		<div class="n1 news__publication-info">
+		<div class="news__publication-info">
             <?if($arParams["DISPLAY_NAME"]!="N" && $arItem["NAME"]):?>
               <?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
           <a class="news__link" href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><h3 class="news__title content-block"><mark><?echo $arItem["NAME"]?></mark>
@@ -37,28 +37,22 @@ $this->setFrameMode(true);
             <?if($arParams["DISPLAY_DATE"]!="N" && $arItem["DISPLAY_ACTIVE_FROM"]):?>
 				<time class="news__publication-date"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?></time>
 			<?endif?>
-		</div>
-    <?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
-			<?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
-				<a class="news__link" href="<?=$arItem["DETAIL_PAGE_URL"]?>"><div 
+		</div>             
+<div 
 						class="news__illustration"
 						style='background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>);
 background-size: <?=$arItem["PREVIEW_PICTURE"]["WIDTH"]?> <?=$arItem["PREVIEW_PICTURE"]["HEIGHT"]?>;'
 						border="0"
 						alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>"
 						title="<?=$arItem["PREVIEW_PICTURE"]["TITLE"]?>"
-					></div></a>
+					>
+    <?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
+			<?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
+				<a class="news__link" href="<?=$arItem["DETAIL_PAGE_URL"]?>"></a>
 			<?else:?>
-					<div 
-						class="news__illustration"
-						style='background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>);
-background-size: <?=$arItem["PREVIEW_PICTURE"]["WIDTH"]?> <?=$arItem["PREVIEW_PICTURE"]["HEIGHT"]?>'
-						border="0"
-						alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>"
-						title="<?=$arItem["PREVIEW_PICTURE"]["TITLE"]?>"
-	></div>
 			<?endif;?>
 		<?endif?>
+	 </div><br />
       <?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
 			<div style="clear:both"></div>
 		<?endif?>
@@ -77,8 +71,9 @@ background-size: <?=$arItem["PREVIEW_PICTURE"]["WIDTH"]?> <?=$arItem["PREVIEW_PI
 			<?endif?>
 			</small><br />
 		<?endforeach;?>
+</article></div>
 <?endforeach;?>
 <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
 	<br /><?=$arResult["NAV_STRING"]?>
 <?endif;?>
-</article>
+	</div>

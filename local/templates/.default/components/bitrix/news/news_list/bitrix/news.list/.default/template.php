@@ -77,3 +77,7 @@ background-size: <?=$arItem["PREVIEW_PICTURE"]["WIDTH"]?> <?=$arItem["PREVIEW_PI
 	<br /><?=$arResult["NAV_STRING"]?>
 <?endif;?>
 	</div>
+<div class="grid-container" style="margin-bottom: 10px;">
+    <a class="press-center__view-more button button--inverted" href="press-center.html" data-target="view-more.button"
+      data-action="view-more#load">Показать более ранние материалы</a>
+ </div>

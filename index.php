@@ -9,7 +9,11 @@ $APPLICATION->SetTitle("Главная");
  <a href="/novosti/" class="go-to-section__link">
 		<h2 class="go-to-section__title">Новости</h2>
  <span class="go-to-link">
-		Все новости <?=ASSET_PATH?><span class="bxhtmled-surrogate-inner"><span class="bxhtmled-right-side-item-icon"></span><span class="bxhtmled-comp-lable" unselectable="on" spellcheck="false">Код PHP</span></span></span>icons.svg#dropdown-arrow"/&gt; </a>
+		<span class="go-to-link">
+            Все новости
+            <svg class="icon" role="img"><use xlink:href="<?=ASSET_PATH?>icons.svg#dropdown-arrow"/></svg>
+          </span>
+</a>
 	</div>
 	 <?$APPLICATION->IncludeComponent(
 	"bitrix:news",

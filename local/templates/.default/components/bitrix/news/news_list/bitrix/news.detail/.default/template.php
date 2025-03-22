@@ -30,7 +30,7 @@ $this->setFrameMode(true);
     </a>
   </header>
   <div class="article__content-wrapper">
-	  <div class="article__lead content-block" style="text-align: justify;">
+	  <div class="article__lead content-block">
       <?if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && $arResult["FIELDS"]["PREVIEW_TEXT"]):?>
         <p><?=$arResult["FIELDS"]["PREVIEW_TEXT"];unset($arResult["FIELDS"]["PREVIEW_TEXT"]);?></p>
       <?endif;?>
@@ -59,7 +59,6 @@ $this->setFrameMode(true);
         height="<?=$arResult["DETAIL_PICTURE"]["HEIGHT"]?>"
         alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
         title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
-		style="text-align: center;"
         />
       <?endif?>
       <p style="margin-top: 50px;">
@@ -75,8 +74,6 @@ $this->setFrameMode(true);
       </p>
     </div>
   </div>
-
 	<div style="clear:both"></div>
-
 </section>
 </div>

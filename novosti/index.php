@@ -2,9 +2,11 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
 ?><section class="press-center" data-controller="view-more">
+<? if(basename($_SERVER['PHP_SELF'])== "index.php"):?>
 <div class="press-center__header">
 	<h1 class="light">Новости</h1>
 </div>
+ <?endif;?>
 <div class="press-center__articles press-center__articles--wide-list" data-target="view-more.container">
 	 <?$APPLICATION->IncludeComponent(
 	"bitrix:news",
@@ -38,6 +40,7 @@ $APPLICATION->SetTitle("Новости");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
+		"FILE_404" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "18",
 		"IBLOCK_TYPE" => "novosti",
@@ -45,7 +48,7 @@ $APPLICATION->SetTitle("Новости");
 		"LIST_ACTIVE_DATE_FORMAT" => "j F Y",
 		"LIST_FIELD_CODE" => array("",""),
 		"LIST_PROPERTY_CODE" => array("",""),
-		"MESSAGE_404" => "",
+		"MESSAGE_404" => " ",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
 		"NEWS_COUNT" => "20",
@@ -118,7 +121,7 @@ $APPLICATION->SetTitle("Новости");
 		"LIST_FIELD_CODE" => array("",""),
 		"LIST_PROPERTY_CODE" => array("",""),
 		"MEDIA_PROPERTY" => "",
-		"MESSAGE_404" => "",
+		"MESSAGE_404" => " ",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
 		"NEWS_COUNT" => "20",
@@ -154,8 +157,5 @@ $APPLICATION->SetTitle("Новости");
 		"USE_SHARE" => "N"
 	)
 );?>
-</div>
-<div class="grid-container">
- <a class="press-center__view-more button button--inverted" href="press-center.html" data-target="view-more.button" data-action="view-more#load">Показать более ранние материалы</a>
 </div>
  </section><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

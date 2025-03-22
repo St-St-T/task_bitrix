@@ -32,13 +32,13 @@ background-size: <?=$arItem["PREVIEW_PICTURE"]["WIDTH"]?> <?=$arItem["PREVIEW_PI
 					>
     <?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
 			<?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
-				<a class="news-important__link" href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+						<a class="news-important__link" href="<?=$arItem["DETAIL_PAGE_URL"]?>">
 			<?else:?>
 			<?endif;?>
 		<?endif?>
             <?if($arParams["DISPLAY_NAME"]!="N" && $arItem["NAME"]):?>
               <?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
-          <a class="news-important__link" href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><h2 class="news-important__title"><?echo $arItem["NAME"]?>
+							<a class="news-important__link" href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><h2 class="news-important__title"><?echo $arItem["NAME"]?>
               <?else:?>
           <?echo $arItem["NAME"]?>
               <?endif;?>

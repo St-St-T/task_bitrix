@@ -62,10 +62,7 @@ $this->setFrameMode(true);
 		style="text-align: center;"
         />
       <?endif?>
-      <div class="image-caption">
-		  Подпись к фотографии.
-      </div>
-      <p>
+      <p style="margin-top: 50px;">
         <?if($arResult["NAV_RESULT"]):?>
           <?if($arParams["DISPLAY_TOP_PAGER"]):?><?=$arResult["NAV_STRING"]?><br /><?endif;?>
           <?echo $arResult["NAV_TEXT"];?>
@@ -76,26 +73,6 @@ $this->setFrameMode(true);
           <?echo $arResult["PREVIEW_TEXT"];?>
         <?endif?>
       </p>
-      <blockquote class="blockquote" data-controller="polar-lights-masked"
-        data-action="mousemove->polar-lights-masked#updateMaskPosition">
-
-        Один паром у&nbsp;нас сегодня все-таки перевёз несколько автомашин.
-        На&nbsp;11&nbsp;часов утра ветер на&nbsp;реке в&nbsp;районе переправы
-        Салехард-Лабытнанги усилился до&nbsp;25&nbsp;метров в&nbsp;секунду. Паромы
-        остановились. Прекращены также все перевозки водным транспортом. Из-за сильного
-        северо-восточного ветра из&nbsp;аэропорта Салехард временно прекращён
-        приём-выпуск вертолётных рейсов. Самолёты летают в&nbsp;штатном режиме
-        <div class="person-info">
-          <img class="person-info__photo" src="<?=ASSET_PATH?>stub/12.jpg" alt="Виталий Лагутин">
-          <div class="person-info__description">
-            <span class="person-info__name">Виталий Лагутин</span>
-            <span class="person-info__position">директор дирекции транспорта ЯНАО</span>
-          </div>
-        </div>
-        <div class="polar-lights polar-lights--dim">
-          <div class="polar-lights__mask" data-target="polar-lights-masked.mask"></div>
-        </div>
-      </blockquote>
     </div>
   </div>
 
